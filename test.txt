@@ -1,0 +1,45 @@
+package com.amazonaws.samples;
+
+import java.sql.*;
+import java.util.List;
+
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.rds.AmazonRDS;
+import com.amazonaws.services.rds.AmazonRDSClientBuilder;
+import com.amazonaws.services.rds.model.DBInstance;
+import com.amazonaws.services.rds.model.DescribeDBInstancesResult;
+
+public class LabCC {
+
+	public static void main(String[] args) {
+		AmazonRDS awsRDS = AmazonRDSClientBuilder.standard().withRegion(Regions.AP_SOUTH_1).build();
+		DescribeDBInstancesResult dbInstancesResult = awsRDS.describeDBInstances();
+		
+		List<DBInstance> dbInstance = dbInstancesResult.getDBInstances();  
+		
+		for(DBInstance dbInst: dbInstance) {
+			System.out.println("DB Instances: " + dbInst.getDBInstanceIdentifier());
+		}
+		
+		String hostName = "db.c9thzloiayz8.ap-south-1.rds.amazonaws.com";
+		String port = "3308";
+		String JDBC_URL = "jdbc:mysql://" + hostName + ":" + port + "/emp";
+		
+		try {
+			Connection con = DriverManager.getConnection(JDBC_URL, "root", "root1234");
+			Statement stmt = con.createStatement();
+			
+			ResultSet rs = stmt.executeQuery("select * from employee");
+			
+			while(rs.next()) {
+				String id = rs.getString(1);
+				String name = rs.getString(2);
+				
+				System.out.println("ID is : " + id);
+				System.out.println("Name is : "+ name);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
