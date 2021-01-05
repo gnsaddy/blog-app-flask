@@ -1,7 +1,7 @@
 
 <?php
 
-$link = mysqli_connect("endpoint", "root", "root12345", "demo");
+$link = mysqli_connect("endpoint", "root", "root1234", "demo");
 if ($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
