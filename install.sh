@@ -1,4 +1,8 @@
-# Apache Php installation     
+# Apache Php installation   
+
+
+# updating sysytem
+sudo apt-get update
 
 # install apache2
 sudo apt-get install apache2 -y
