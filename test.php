@@ -45,7 +45,7 @@ if (mysqli_query($link, $sql)) {
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "id: " . $row["first_name"] . " - Name: " . $row["last_name"] . " " . $row["email"] . "<br>";
+            echo "First Name: " . $row["first_name"] . " Last Name: " . $row["last_name"] . " Email: " . $row["email"] . "<br>";
         }
     } else {
         echo "0 results";
