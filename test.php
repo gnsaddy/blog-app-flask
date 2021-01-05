@@ -32,7 +32,7 @@ if (mysqli_query($link, $sql)) {
 
 <body>
     <h1>Enter to insert data</h1>
-    <form action="insert.php" method="post">
+    <form action="test.php" method="post">
         <p> <label for="firstName">First Name:</label> <input type="text" name="first_name" id="firstName" required> </p>
         <p> <label for="lastName">Last Name:</label> <input type="text" name="last_name" id="lastName" required> </p>
         <p> <label for="emailAddress">Email Address:</label> <input type="text" name="email" id="emailAddress" required> </p>
