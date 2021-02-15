@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 2px;
+}
+/*patshala */
+.up {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*first block*/
+.first{
+    margin: 1rem 1rem;
+    padding: 1px;
+    font: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 1rem;
+    background: linear-gradient( cornsilk 50%, white 70%);
+    width: 97%;
+    
+}
+/*right container*/
+.right{
+    
+    display: flex;
+}
+/*Adjusting font */
+#what{
+    font-size: 1.33rem;
+}
+/*Second box */
+.second {
+    background: linear-gradient(to right, blue ,violet );
+    color: cornsilk;
+    border-radius: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+    width: 80%;
+    font-size: 1.33rem;
+    align-content: center;
+    
+}
+
+/*downlaod section */
+.download{
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    background: cornsilk;
+}
+#content{
+    margin: 2rem;
+    padding: 2rem;
+    text-align: right;
+    font-size: 20px;
+}
+
+/* Style buttons */
+.btn {
+    background: linear-gradient(to right, blue, violet);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 60%;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background: linear-gradient(to right, darkblue, blue);
+  }
