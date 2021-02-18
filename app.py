@@ -1,14 +1,12 @@
 from flask import Flask, render_template, json
-from flask_sqlalchemy import SQLAlchemy
+from models import BlogPost
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite'
 
 
 def load_data():
     with open("static/data.json") as f:
         return json.load(f)
-
 
 data = load_data()
 
