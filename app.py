@@ -36,7 +36,7 @@ def post():
         return redirect("/post")
     else:
         data = BlogPost.query.order_by(BlogPost.date_posted).all()
-        return render_template("post.html")
+        return render_template("post.html", posts=data)
 
 
 if __name__ == "__main__":
