@@ -3,9 +3,9 @@
     <title>Index</title>
 {% endblock %}
 {% block content %}
-    <h1 class="text-primary">All post</h1>
+    <h1 class="text-primary btn btn-success">All post</h1>
     {% for data in data %}
-        <p>Id: {{ data.id }}</p>
+        <p class="">Id: {{ data.id }}</p>
         <p>Name : {{ data.name }}</p>
         {% if data.blog %}
             <p>Address: {{ data.blog }}</p>
