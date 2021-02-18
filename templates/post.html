@@ -1,16 +1,31 @@
 {% extends "include/base.html" %}
 {% block title %}
-    <title>Index</title>
+    <title>POST</title>
 {% endblock %}
 {% block content %}
-    <h1 class="text-primary btn btn-success">All post</h1>
-    {% for data in data %}
-        <p class="">Id: {{ data.id }}</p>
-        <p>Name : {{ data.name }}</p>
-        {% if data.blog %}
-            <p>Address: {{ data.blog }}</p>
-        {% else %}
-            <p>Address : N/A</p>
-        {% endif %}
-    {% endfor %}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mt-5 shadow ml-4">
+                <div class="card-body">
+                    <h2>Create New Blog post: </h2>
+                    <form method="post" action="/post">
+                        <div class="form-group">
+                            <label for="title">Title: </label>
+                            <input class="form-control" type="text" name="title" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="post">Post: </label>
+                            <input class="form-control" type="text" name="post" id="post">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author: </label>
+                            <input class="form-control" type="text" name="author" id="author">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
